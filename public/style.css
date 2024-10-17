@@ -1,0 +1,89 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Meow Script','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+.page-title {
+    font-size: 44px;
+    font-weight: 600;
+}
+button {
+    cursor: pointer;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 350px;
+    background-color: white;
+    padding: 8px 12px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-container {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 24px;
+    border-radius: 24px;
+}
+.img-container img {
+    max-width: 100%;
+}
+
+::view-transition-old(root) {
+    animation: 1s transition-out 0s ease;
+}
+  
+::view-transition-new(root) {
+    animation: 1s transition-in 0s ease;
+}
+  
+@keyframes transition-out {
+    from {
+      opacity: 1;
+      translate: 0;
+      rotate: 0;
+    }
+    to {
+      opacity: 0;
+      translate: -3rem -5rem;
+      rotate: -10deg;
+    }
+  }
+  
+  @keyframes transition-in {
+    from {
+      opacity: 0;
+      translate: 3rem 5rem;
+      rotate: -2deg;
+    }
+    to {
+      opacity: 1;
+      translate: 0;
+      rotate: 0;
+    }
+  }
