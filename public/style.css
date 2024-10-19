@@ -9,6 +9,9 @@ body {
     padding: 0;
     background-color: aliceblue;
 }
+#root {
+    view-transition-name: page-content;
+}
 .page-title {
     font-size: 44px;
     font-weight: 600;
@@ -54,11 +57,11 @@ button {
     max-width: 100%;
 }
 
-::view-transition-old(root) {
+::view-transition-old(page-content) {
     animation: 1s transition-out 0s ease;
 }
   
-::view-transition-new(root) {
+::view-transition-new(page-content) {
     animation: 1s transition-in 0s ease;
 }
   
